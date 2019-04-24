@@ -1,0 +1,52 @@
+Components are collection of elements
+ --> allow to have reusability
+ --> composable
+ --> configurable
+ --> maintainable
+
+props are readonly; state is immutable entity; 
+array spread operator(... list) --> spread all elements of a list
+
+
+ diffing algorithm
+ Two way data binding
+ ServiceWorkers
+ propTypes
+ States
+ Event Handling
+ Inversion of Control
+ React Component Life Cycle Hooks
+ react eject
+ life cycle arguments 
+
+react used for legacy applications
+event handling in react is done by passing methods as props to children
+
+componentWillMount
+componentDidMount --> after render, access DOM, integrate frameworks, set timers, AJAX requests.
+componentWillReceiveProps --> when receiving new props, not called on initial render
+shouldComponentUpdate --> before 
+componentWillUpdate
+componentDidUpdate
+componentWillUnmount
+
+functional components can be used whenever there is no need of state, life cycle hooks.
+they are also called stateless components
+
+master detail relationship --> detailed description of one component
+
+redux --> data manager (M and C part of MVC)
+store --> single state management of application on client side
+actions --> event dispatchers
+reducers --> event handlers that update state
+
+containers --> parent components to which store is binded
+action creator --> a function that returns an action
+provider --> make my store available to the container
+             it takes the store and pass it to connect method
+connect --> method that exposes store and actions as props to the containers(components)
+
+components are of two types ==> containers(do not have UI of their own, containers different components) 
+                                and presentations(they have their seperate views)
+
+rule #1: whenever any action is dispacthed all the reducers are notified

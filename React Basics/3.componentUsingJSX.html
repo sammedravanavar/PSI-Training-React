@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.6.2/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/15.6.2/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.0-alpha1/JSXTransformer.js"></script>
+</head>
+<body>
+    <div id="container"></div>
+    <script type="text/jsx">
+        // 1.Create/Define the Component
+        // 2.Instantiate the component
+        
+        class BasicComponent extends React.Component{
+            render(){
+                return <section>
+                            <h5 className="header">Component using JSX ! </h5>
+                            <p>This is para!</p>
+                        </section>
+            }
+        }
+        {/*var basicComponentInstance = <BasicComponent/>*/}
+        var basicComponentInstance = <div>
+                                        <BasicComponent/>
+                                        <BasicComponent/>
+                                        <BasicComponent/>
+                                    </div>
+        ReactDOM.render(basicComponentInstance,document.getElementById('container'));
+    </script>
+</body>
+</html>

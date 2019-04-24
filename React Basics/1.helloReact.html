@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.6.2/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/15.6.2/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.0-alpha1/JSXTransformer.js"></script>
+    <!-- jsx transformer transformer transform jsx to React APIs -->
+    <style>
+        .header{
+            border: 2px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+    <script type="text/jsx">
+        // react element!! React.createElement(theElement,attributes,child)
+        // var h1Element = React.createElement('h1',{id:'header'},"Hello React!");
+        // var pElement = React.createElement('p',{},"This is a Paragraph!!");
+        // var fragment = [h1Element,pElement];
+        // var sectionElement = React.createElement('section',{},fragment);
+        var sectionElement = <section>
+                                <h1 className="header">heelo JSX ! </h1>
+                                {/* This is comment */}
+                                {/*<p>This is para!</p>*/}
+                                <p>This is para!</p>
+                            </section>
+        ReactDOM.render(sectionElement,document.getElementById('container'))
+    </script>
+</body>
+</html>

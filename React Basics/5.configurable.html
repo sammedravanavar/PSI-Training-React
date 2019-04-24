@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.6.2/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/15.6.2/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.0-alpha1/JSXTransformer.js"></script>
+</head>
+<body>
+    <div id="container"></div>
+    <script type="text/jsx">
+        class CourseComponent extends React.Component{
+            render(){
+                return <div>
+                            <h1>{this.props.coursename}</h1>
+                            <h5>Duration: {this.props.duration}</h5>
+                        </div>
+            }
+        }
+        class ListOfCourses extends React.Component{
+            constructor(){
+                super();
+                this.courseOne = "React";
+                this.courseTwo = "Angular";
+                this.courseThree = "Vue";
+            }
+            render(){
+                return <section>
+                            <CourseComponent coursename={this.courseOne} duration={Date()}/>
+                            <CourseComponent coursename={this.courseTwo} duration="3 Days"/>
+                            <CourseComponent coursename={this.courseThree} duration="3 Days"/>
+                            <CourseComponent coursename="Backbone" duration="3 Days"/>
+                            <CourseComponent coursename="Node" duration="3 Days"/>
+                        </section>
+            }
+        }
+        ReactDOM.render(<ListOfCourses/>,document.getElementById('container'))
+    </script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+1. JSXTransformer.js:309 You are using the in-browser JSX transformer. Be sure to precompile your JSX for 
+    production - http://facebook.github.io/react/docs/tooling-integration.html#jsx
+2. Each child in a list should have a unique "key" prop.
+3. Adjacent JSX elements must be wrapped in an enclosing tag.
+4. Uncaught ReferenceError: Must call super constructor in derived class before accessing 'this' or returning 
+    from derived constructor
+5. Cannot assign to read only property 'value' of object '#<Object>'  ==> props values are read only
+6. Cannot read property 'value' of this.props  ==> pass props as parameters to construcrtor() and super()
+7. Element type is invalid: expected a string (for built-in components) or a class/function 
+    (for composite components) but got: object.
+8. Actions must be plain objects. Use custom middleware for async actions.  ==> Use Redux thunk

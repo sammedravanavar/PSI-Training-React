@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.6.2/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/15.6.2/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.0-alpha1/JSXTransformer.js"></script>
+</head>
+<body>
+    <div id="container"></div>
+    <script type="text/jsx">
+        class FormComponent extends React.Component{
+            render(){
+                return <form>
+                        Enter Comment:<input type="text"/>
+                            <input type="button" value="Add"/>
+                        </form> 
+            }
+        }
+        class CommentComponent extends React.Component{
+            render(){
+                return <ul>
+                            <li> React is  a library</li>
+                            <li> JSX is fun </li>
+                            <li> Working with Components</li>
+                        </ul>
+            }
+        }
+        class BlogComponent extends React.Component{
+            render(){
+                return <div>
+                            <h1> Blog </h1>
+                            <FormComponent/>
+                            <CommentComponent/>
+                        </div>
+            }       
+        }
+        ReactDOM.render(<BlogComponent/>,document.getElementById('container'))
+    </script>
+</body>
+</html>
