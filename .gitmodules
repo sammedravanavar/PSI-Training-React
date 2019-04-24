@@ -1,0 +1,12 @@
+[submodule "firstreactapp"]
+	path = firstreactapp
+	url = ./firstreactapp
+[submodule "githubusers"]
+	path = githubusers
+	url = ./githubusers
+[submodule "onlineshopping"]
+	path = onlineshopping
+	url = ./onlineshopping
+[submodule "reduxapp"]
+	path = reduxapp
+	url = ./reduxapp
