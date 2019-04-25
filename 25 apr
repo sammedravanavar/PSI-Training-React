@@ -1,0 +1,22 @@
+steps:
+download and install mongodb community server
+create folder data in C drive, db folder in data folder.
+set mongodb path ==> C:\Program Files\MongoDB\Server\4.0\bin
+open node commond prompt, run "mongod", run "mongo"
+
+steps:
+show dbs ==> list databases
+use <dbname> ==> switch database
+db.collection.insert() ==> insert data
+db.collection.find() ==> get all records
+db.collection.find().pretty() ==> get all records in nice format
+
+mongod ==> server
+mongo ==> client
+collections ==> tables
+
+npm init --y ==> initialize application with default values
+npm install express --save
+npm install mongodb --save
+
+Cannot set headers after they are sent to the client ==> check if you are calling res.json() twice for a call;
