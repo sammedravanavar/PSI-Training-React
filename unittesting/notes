@@ -1,0 +1,16 @@
+Unit testing:
+Test suites - collection of test cases
+
+Libraries and frameworks for testing -
+JavaScript - Jasmine, Mocha, Chai, Sinon, qUnit
+React - jest
+Test runner(executer) - Karma
+
+Jasmine:
+describe - a suite, is a function
+it - a spec(test case), is also a function
+toBe, toEqual, toMatch - matchers
+
+
+1.install jasmine-core, karma, karma-jasmine
+2.install karma-cli -g (karma.exe)

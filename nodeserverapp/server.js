@@ -4,10 +4,13 @@ var mongodb = require('mongodb');
 var cors = require('cors');
 var bp = require('body-parser');
 var router = express.Router(); //Server side router
-
+var path = require('path');
 
 app.use(cors())
 app.use(bp.json())
+
+app.use("/static/js",express.static(path.join(__dirname,'static','js')))
+app.use("/static/css",express.static(path.join(__dirname,'static','css')))
 
 let url = "mongodb://127.0.0.1:27017";
 let MongoClient = mongodb.MongoClient;
@@ -55,6 +58,16 @@ router.route('/addproduct').post((req,res)=>{
     })
 })
 
+router.route('/validatelogin').post((req,res)=>{
+    if(req.body.username === "samravan@publicissapient.com" && req.body.password === "123456"){
+        res.send("success");
+    }
+    else{
+        res.send("failure");
+    }
+})
+
+
 router.route('/deleteproduct').post((req,res)=>{
     console.log(req.body)
     MongoClient.connect(url,{useNewUrlParser:true},(err,db)=>{
@@ -94,11 +107,12 @@ router.route('/incrementlikes').post((req,res)=>{
 
 app.use('/',router);
 app.get('/',(req,res)=>{
-    res.send("Use /products to get the products!");
+    res.sendFile("index.html",{root:__dirname})
 })
 app.use((req,res)=>{
-    if(res.statusCode == 404);
-    res.send("Error !")
+    res.sendFile("index.html",{root:__dirname})
+    // if(res.statusCode == 404);
+    // res.send("Error !")
 });
 app.listen(5000,()=>{
     console.log("Server running at port 5000!");
