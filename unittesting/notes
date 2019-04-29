@@ -5,6 +5,7 @@ Libraries and frameworks for testing -
 JavaScript - Jasmine, Mocha, Chai, Sinon, qUnit
 React - jest
 Test runner(executer) - Karma
+enzyme - testing utility that mounts components by not actually mounting on the browser
 
 Jasmine:
 describe - a suite, is a function
